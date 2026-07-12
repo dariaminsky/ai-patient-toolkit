@@ -4,11 +4,11 @@ If you read only one chapter of this guide, read this one.
 
 Everything else — finding the right doctor, reaching researchers, evaluating options — depends on having your data in a form you can re-read, share, and reason about. Without it, every AI chat starts from zero, and every consultation wastes its first ten minutes.
 
-Your records are probably scattered: one hospital's diagnosis report, another's scans, labs from a third, a genetic test from years ago, consultations that exist only in memory — often across countries, languages, and healthcare systems that don't talk to each other. In that state your data can't be re-read by anything, can't be shared as one coherent picture, and can't be queried. The fix is not a database. It's a folder of plain text files that any AI can read directly.
+Your records are probably scattered: one hospital's diagnosis report, another's scans, labs from a third, a genetic test from years ago, consultations that exist only in memory — often across countries, languages, and healthcare systems that don't talk to each other. In that state your data can't be re-read by anything, can't be shared as one coherent picture, and can't be queried. The fix is a folder of plain text files that any AI can read directly.
 
 ## Why not just chat with an AI and let it remember?
 
-The question everyone asks first, so here's the answer.
+Everyone asks this first.
 
 Long chats degrade. Over a long conversation the model builds its own summary of you, and that summary quietly drifts from your real records — while sounding more confident, not less. "Memory" features have the same flaw, and it's now documented: in [a 2026 study](https://arxiv.org/abs/2605.12978), an AI that solved a set of problems perfectly went on to fail 54% of those same problems after "consolidating" its experience into memory. The rewriting step itself is the failure mode.
 

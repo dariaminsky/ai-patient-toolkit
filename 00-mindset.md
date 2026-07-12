@@ -6,7 +6,7 @@ This chapter is about the one shift that makes everything else in this guide wor
 
 ## The shift
 
-A serious diagnosis pushes you into a role: the patient who waits, signs the forms, and is told what happens next. You don't have to take that role. The alternative is not fighting your doctors, and not becoming your own doctor. It's becoming an active participant in your own case.
+A serious diagnosis pushes you into a role: the patient who waits, signs the forms, and is told what happens next. You don't have to take that role. There is another one: an active participant in your own case. It requires no fight with your doctors and no medical degree.
 
 In practice, that means three things:
 
@@ -14,7 +14,7 @@ In practice, that means three things:
 - **Doctors are collaborators.** The good ones read new research, welcome questions, and treat you as part of the team. When you find one, hold on to them and bring them everything you learn. If someone gets irritated by your questions — that's useful information too.
 - **The research is your job now.** Science reaches everyday practice with a delay of years, while new results come out monthly — and sometimes they matter for your exact situation. Nobody will watch that frontier for you. With today's AI tools, you can — without a medical degree and without writing code.
 
-That third point is the new one. It simply wasn't possible before these tools. Now it takes a folder and a chatbot. That's why this guide exists.
+That third point is the new one. It wasn't possible before these tools. Now it takes a folder and a chatbot. That's why this guide exists.
 
 ## What this guide is — and isn't
 

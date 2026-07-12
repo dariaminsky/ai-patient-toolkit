@@ -39,7 +39,7 @@ your-health/
 
 Every numbered folder can hold its own `original-records/` for untouched raw files, next to their transcriptions.
 
-The point is not the structure. The point is: **everything in one place**, **plain text**, **version-controllable**, **readable by any LLM in one upload**.
+The exact folders matter less than the principles: **everything in one place**, **plain text**, **version-controllable**, **readable by any LLM in one upload**.
 
 ## Prompt template — first analysis of a new clinical document
 

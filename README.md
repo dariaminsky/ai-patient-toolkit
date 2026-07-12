@@ -17,7 +17,7 @@ That's the whole routine. Stuck at any step? Open the ordinary free chatbot you 
 
 ## Why versions?
 
-Your medical situation is a story, not a snapshot. Treatments change, results come and go, and one day you or a new doctor will need to know *what was true in March, before things changed*. So the profile is never overwritten — each update is saved as a new version, and every old one stays. Nothing is ever lost, you can always look back, and because every old version is kept, your history can't be rewritten — only added to.
+Your medical situation is a story. Treatments change, results come and go, and one day you or a new doctor will need to know *what was true in March, before things changed*. So the profile is never overwritten — each update is saved as a new version, and every old one stays. Nothing is ever lost, and your history can't be rewritten, only added to.
 
 ## Why plain text (.md)?
 
@@ -37,7 +37,7 @@ The same assistant can set up **agents** for you — standing instructions it ru
 ## Your privacy
 
 - Everything lives in a folder **on your computer** — not in an app, not in someone's cloud.
-- Be clear-eyed about one thing: when your assistant reads your files, their content goes to the AI provider you chose — that's how these tools work. So choose the provider deliberately, and check how it handles your data: policies differ by provider and plan, and they change. If there's a "use my data for training" setting, turn it off; a paid plan is usually the safer place for medical data than a free one. The guide shows where to look.
+- Know this before you start: when your assistant reads your files, their content goes to the AI provider you chose — that's how these tools work. So choose the provider deliberately, and check how it handles your data: policies differ by provider and plan, and they change. If there's a "use my data for training" setting, turn it off; a paid plan is usually the safer place for medical data than a free one. The guide shows where to look.
 - Anything that goes *further* than your own assistant — web searches, other services — gets identifiers stripped first: no names, no birth dates, no record numbers, no hospital names. The model reasons just as well without them.
 - Nothing about you goes into this repository, and nothing personal is in it.
 
