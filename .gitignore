@@ -1,0 +1,12 @@
+# never commit raw medical material
+original-records/
+*.pdf
+*.jpg
+*.jpeg
+*.png
+.DS_Store
+
+# internal working notes — not for the public repo
+PUBLISH_GUIDE_*.md
+
+# (chapter drafts moved out of the repo entirely)
