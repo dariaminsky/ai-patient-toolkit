@@ -58,4 +58,4 @@ Quote little. Link the source.
 
 ## Run manually in v0.2
 
-Run this file only when the person asks. Scheduling instructions will come in a later version.
+Run this file only when the person asks.
