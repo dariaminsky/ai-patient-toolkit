@@ -46,13 +46,6 @@ When a new report arrives, copy it into the folder. Ask the assistant to update 
 - [Prompt templates](appendix/templates.md)
 - [Resources](appendix/resources.md)
 
-## Coming later
-
-- Tool-specific setup guides for Claude Code and Codex
-- Optional scheduling instructions where the tool supports them
-- Condition-specific workflows
-- Country-specific insurance and care-navigation workflows
-
 ## Files and versions
 
 The main file is `00-current-state.md`. It records the current diagnosis, treatment, results, sources, and open questions.
