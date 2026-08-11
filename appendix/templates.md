@@ -155,7 +155,7 @@ Show me the evidence and the questions to take to my doctor or pharmacist.
 
 ## Outside v0.2
 
-- Treatment-specific prompts. Those depend too much on the specific condition + protocol; they will be covered in future updates.
+- Treatment-specific prompts. Those depend too much on the specific condition and protocol.
 - Insurance-navigation templates. Country-specific; out of scope.
 - Death / advance-directive planning. Important; separate guide.
 
