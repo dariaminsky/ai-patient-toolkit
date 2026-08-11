@@ -1,0 +1,56 @@
+# This file only reduces mistakes. Keep this repository local.
+
+# Direct identifiers and contacts
+care-team.md
+source-index.md
+identity/
+insurance/
+
+# Raw medical records
+raw/
+imports/
+exports/
+**/original-records/
+*.pdf
+*.doc
+*.docx
+*.rtf
+*.odt
+*.eml
+*.msg
+*.jpg
+*.jpeg
+*.png
+*.heic
+*.tif
+*.tiff
+*.gif
+*.dcm
+*.dicom
+*.nii
+*.nii.gz
+*.csv
+*.tsv
+*.xls
+*.xlsx
+*.zip
+*.7z
+*.tar
+*.gz
+
+# Raw genetic data
+**/genetics/raw/
+*23andme*
+*ancestry*
+*.vcf
+*.bam
+*.cram
+*.fastq
+*.fastq.gz
+
+# Local and temporary files
+.DS_Store
+Thumbs.db
+*.bak
+*.tmp
+*~
