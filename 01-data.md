@@ -4,38 +4,48 @@ If you read only one chapter of this guide, read this one.
 
 Everything else — finding the right doctor, reaching researchers, evaluating options — depends on having your data in a form you can re-read, share, and reason about. Without it, every AI chat starts from zero, and every consultation wastes its first ten minutes.
 
-Your records are probably scattered: one hospital's diagnosis report, another's scans, labs from a third, a genetic test from years ago, consultations that exist only in memory — often across countries, languages, and healthcare systems that don't talk to each other. In that state your data can't be re-read by anything, can't be shared as one coherent picture, and can't be queried. The fix is a folder of plain text files that any AI can read directly.
+Your records are probably scattered. The diagnosis sits with one hospital, scans with another, and labs with a third. A genetic test may be years old. Some consultations exist only in memory. Several countries or languages make the gaps worse. Every consultation and AI session starts with partial context.
+
+A plain-text working folder gives you a current summary, a source index, and a version history. Keep the original records separate and unchanged.
 
 ## Why not just chat with an AI and let it remember?
 
 Everyone asks this first.
 
-Long chats degrade. Over a long conversation the model builds its own summary of you, and that summary quietly drifts from your real records — while sounding more confident, not less. "Memory" features have the same flaw, and it's now documented: in [a 2026 study](https://arxiv.org/abs/2605.12978), an AI that solved a set of problems perfectly went on to fail 54% of those same problems after "consolidating" its experience into memory. The rewriting step itself is the failure mode.
+Long chats can drift. The model builds a summary of you. That summary can slowly move away from your records.
 
-So keep two separate stores, and never let anything collapse them:
+A [2026 preprint](https://arxiv.org/abs/2605.12978) tested one kind of agent memory on ARC-AGI tasks. In one result, GPT-5.4 failed 54% of problems it had solved before memory consolidation. This covers one experimental setup. Treat it as a warning about automated rewriting.
+
+Keep two separate stores:
 
 - **raw records** — every report, every result, preserved untouched;
 - **your summary** — the current-state file you maintain, in dated versions.
 
-Nothing auto-rewrites the summary, and the summary never replaces the raw records. In practice: start fresh chats instead of continuing forever, paste your current file at the start, never rely on a vendor's memory feature for anything that affects treatment. Plain text also means you can switch models in minutes when the landscape changes — you keep the substrate, you rent the model.
+Keep the summary under your control. Keep the raw records as ground truth. Start fresh chats when the old one gets long. Add your current verified profile each time. Plain text also lets you switch models in minutes — you keep the substrate, you rent the model.
+
+## Urgent care
+
+Use this folder for organization and appointment prep. If a symptom may be urgent, contact local emergency services or your urgent-care line. Do not wait for an AI answer.
 
 ## Gather everything
 
-Before any structure: gather. Every document, scan, report, lab result, consultation note, genetic test. Chaos in one folder beats order across six portals — a folder can be handed to an AI with "read everything."
+Start with an inventory. List each document, scan, report, lab result, consultation note, and genetic test. Keep the originals in protected private storage.
+
+Choose what the assistant may read. Approve the exact files first. Copy one document into the working folder when the task needs it. A local app can still send its contents to the AI provider for inference.
 
 - Portal won't let you download? **Photograph the screen.**
 - Paper documents? **Photograph each page.**
-- Photos stuck on your phone? **Email them to yourself** (or AirDrop), then drag into the folder — your assistant can talk you through it.
-- Doctor emails? **Forward them to one dedicated address** or save as PDF.
+- Photos stuck on your phone? **Use AirDrop, Quick Share, a cable, or an encrypted drive.** Email creates another cloud copy.
+- Doctor emails? **Save them as PDF** on your computer. If email is your only route, check who stores the message and for how long.
 - Your own observations (symptoms, side effects, what helped)? **One text file, dated entries, added when you can.**
 
-One exception to "everything": identity documents — insurance cards, ID scans, policy papers. They are not medical state; keep them wherever you keep your passport, not in this folder.
+Leave identity documents — insurance cards, ID scans, policy papers — wherever you keep your passport.
 
-You're building what I call a *digital health twin* — a picture of your medical reality complete enough that any AI gives you specific, grounded answers about *your* case instead of generic ones.
+You're building a working health summary. It gives an AI a better starting point. Your original records stay in charge.
 
 ## The `.md` format, in one minute
 
-`.md` (Markdown) is plain text with simple structure — `#` for headings, `-` for lists. Any text editor opens it; any AI reads it instantly; it can be compared version-to-version; it will still open in thirty years. A current-state file looks like this:
+`.md` (Markdown) is plain text with simple structure — `#` for headings, `-` for lists. Any text editor opens it. Many assistants can read it. You can compare it version-to-version. A current-state file looks like this:
 
 ```
 # My current state
@@ -64,11 +74,12 @@ Mine is about a thousand lines after months of treatment. Yours starts at twenty
 ```
 your-health/
 ├── README.md                   # what's in this folder
-├── 00-current-state.md         # what's true RIGHT NOW — your health profile (no names: pasteable anywhere)
+├── 00-current-state.md         # current profile; direct identifiers removed; still sensitive
+├── source-index.md             # source IDs and protected locations of original records
 ├── care-team.md                # your doctors and clinics — kept separate, stays local
-├── 01-diagnosis/               # reports, imaging, lab results (labs-YYYYMMDD.md)
+├── 01-diagnosis/               # verified transcriptions; approved working copies only
 ├── 02-treatment/               # what was done, when, outcome; doctor messages and notes
-├── 03-genetics/                # raw genetic data, variant reports
+├── 03-genetics/                # clinically confirmed summaries; raw exports stay elsewhere
 ├── 04-decisions/               # one file per major decision
 ├── 05-side-effects/            # one file per side effect, with timeline
 ├── 06-research/                # papers read, researchers contacted
@@ -76,50 +87,76 @@ your-health/
 └── 99-archive/                 # old profile versions (full-date names)
 ```
 
-Each numbered folder keeps its own `original-records/` subfolder for the untouched raw files, next to their plain-text transcriptions.
+Keep raw originals outside the AI workspace by default. Record each protected location in `source-index.md`. Bring in one approved working copy when the current task needs it.
 
-Start with just `README.md` and `00-current-state.md`; add the rest as you go (full template in the [appendix](appendix/templates.md)). PDFs and photos live in the sub-folders next to their plain-text transcriptions — but the part you and the AI re-read is the `.md`.
+Start with `README.md`, `00-current-state.md`, and `source-index.md`. Add the rest as you go (full template in the [appendix](appendix/templates.md)). Share only the files needed for the current task.
 
 **Transcribe the important parts yourself.** Dumping PDFs on a model and asking for a summary will eventually drop or misread a number — confidently. You type the key facts; the raw scan stays as ground truth. (If an AI assistant transcribes for you, verify every number against the original.)
 
+## Mark every source
+
+Use one source grade for every important fact:
+
+- `[report]` — signed or final clinical report;
+- `[lab]` — laboratory result;
+- `[message]` — email, portal message, or chat;
+- `[verbal]` — spoken information recalled by you;
+- `[self-report]` — symptom or observation recorded by you.
+
+Add the filename and page: `[lab | CBC-2026-03-15.pdf | p. 2]`. For verbal facts, add the speaker and date. Write `date unknown` when needed.
+
+Treat OCR as a draft. Copy the value, unit, reference range, and decimal separator exactly. Keep `1,2` as `1,2` until a human confirms the format. If two records conflict, keep both. Mark the conflict. Never choose a winner silently.
+
 ## Genetic raw data
 
-If you've done 23andMe, Ancestry or similar — **download your raw data now** and save it in `03-genetics/`. Services re-analyze old samples as databases improve (that's how I got the email that became my first warning), get bought, or shut down. Document any pathogenic variant exactly as ClinVar writes it — the specific variant matters for treatment. Document variants of unknown significance too; they get reclassified. And write down family history: which relatives, which illnesses, what age. Nobody will re-collect that for you.
+If you've done 23andMe, Ancestry, or similar, download your raw data while you have access. Store it in a protected location outside the AI workspace and git. Add a neutral reference to `source-index.md`. Genetic raw data identifies you very well.
+
+A consumer result is a lead. Confirm it in a clinical laboratory before using it for care. Discuss pathogenic or likely pathogenic findings with a clinical genetics professional. Record the exact variant, laboratory, classification, and date.
+
+Keep variants of uncertain significance (VUS) too. They can be reclassified. Record them for reference. Do not use a VUS to guide treatment. Add family history: relative, illness, and age where known.
 
 ## Versions
 
-When your situation changes meaningfully, don't edit history — save the old file with a version number and the full date (`00-current-state-v1-2026-04-15.md`) into the archive, and start the new version. After a year the series *is* your story, and a new doctor (or a new AI) can read the trajectory, not just the snapshot. If a coding assistant set up your folder with git, git's own diary of changes is enough and the archive copies become optional; either way the rule is the same: **nothing is ever overwritten.** And one rule in plain words: this folder must never go on the internet.
+When your situation changes, save a dated copy (`00-current-state-v1-2026-04-15.md`) in `99-archive/`. Then update the current file. The series shows your trajectory.
+
+Git is optional. Use it only after you understand it and say yes. Keep the repository local. Add no remote. Exclude raw records, images, PDFs, care-team details, source locations, and raw genetic exports.
+
+Keep an encrypted backup on a second device or service you chose. Version history tracks changes; the backup protects against loss. Test that you can restore one file. Keep this folder off public GitHub.
 
 ## Privacy
 
-- **Paid accounts when possible** — free tiers are more likely to use your conversations for training. Check your provider's data policy, and opt out of training wherever the setting exists.
-- **Major providers, not random health apps.** Clear policies, stable infrastructure.
-- **Local first.** The folder lives on your computer; share copies per conversation rather than storing your files with the provider, and check what the provider retains. Keep your own backup.
-- **Strip identifiers** from anything you paste into an ordinary chatbot: no names, birth dates, record numbers, hospitals. The model reasons just as well without them. This is why the profile keeps no names and your care team lives in a separate `care-team.md` — the profile stays safe to paste as-is.
-- **Never** put credentials, IDs, or insurance numbers in these files — that's not medical state.
+- **Local storage is one layer.** The folder stays on your computer. The text or image you ask a cloud model to read can still go to its provider.
+- **Approve every transfer.** Pick the exact files. Review any web query before it leaves the app.
+- **Check the current policy.** Read retention, training, and deletion terms for your provider and plan. Turn off training where the setting exists.
+- **Remove direct identifiers.** Strip names, full birth dates, record numbers, and hospital names when they are irrelevant. This lowers risk. Rare diagnoses, genetics, dates, and locations can still identify the case.
+- **Treat the profile as sensitive.** Share it with a specific person or service for a specific task.
+- **Keep credentials, IDs, and insurance numbers outside these files.**
 
-(Even paid providers typically keep conversation logs for some period for abuse monitoring — that's normal and different from training. Read the retention policy if the distinction matters to you.)
+Paid plans can still retain logs. Read the current retention policy.
 
 ## Records in several languages and countries
 
-If your medical life spans healthcare systems, languages, and continents, this method is where it pays off most: the folder becomes the only place where your whole story exists in one piece — portable across every border and every doctor. Keep originals in the source language; on top of each, add a short summary in whatever language you use with your doctors and your AI (English is a good default when records span several languages). AIs translate short medical documents well between major languages, and the original stays underneath as ground truth.
+If your records span several languages, keep every original. Add a short translation above it. Mark the language and who translated it.
 
-## What NOT to do
+Treat AI translation as a draft. Verify doses, units, dates, anatomy, and every negation with a clinician or qualified medical translator before care decisions.
+
+## Avoid
 
 - Don't pile everything into one giant unstructured file.
 - Don't keep medical data in shared workspaces (shared Drive, shared Notion).
 - Don't let the cloud hold your only copy.
-- Don't wait for perfect transcription before using AI — imperfect data now beats perfect data in three months.
-- If you use git: the repository stays **private**. Never push medical records to a public repo.
+- Start with an incomplete, verified profile. Add to it over time.
+- Never paste records or personal medical details into a public GitHub issue.
+- If you use git, keep it local and without a remote.
 
 ## This week
 
-- **Today, 15 minutes:** make the folder, write 20 lines of `00-current-state.md` from memory.
-- **This week, 1–2 hours:** gather everything into it. Unorganized is fine.
+- **Today, 15 minutes:** copy the starter folder and make a source index. Add one approved report. Draft 20 lines and verify them.
+- **This week, 1–2 hours:** inventory the remaining records. Leave the originals in protected storage.
 - **Next week, 1–2 hours:** transcribe the most important reports — diagnostics first, genetics next.
 - **Ongoing:** something changed → new version. Something decided → a note in `04-decisions/`.
 
-A month in, you'll have a different kind of conversation with every doctor, every AI, and every researcher you ever talk to about your care.
+After a month, you should have a dated profile and a source index to use in appointments and AI sessions.
 
 ---
 

@@ -1,36 +1,50 @@
 # Resources
 
-_Curated, not exhaustive. Links verified live 2026-07-12._
+_Selected links. Checked 2026-08-11._
 
 ## Tools used in this guide
 
-- [Claude Code](https://claude.com/claude-code) and [Codex](https://openai.com/codex) — the coding assistants from the README: the same chatbots you know, but they can see and organize the files on your own computer.
-- [Obsidian](https://obsidian.md) — a friendly editor for plain-text (`.md`) folders, if you want to read and edit your files yourself. Any text editor works too.
+- [Claude Code Desktop quickstart](https://code.claude.com/docs/en/desktop-quickstart) — local file access through the Claude desktop app.
+- [Codex app documentation](https://learn.chatgpt.com/docs/app) — local projects, permissions, and setup.
+- [Obsidian](https://obsidian.md) — a friendly editor for Markdown folders. Any text editor works.
+
+## Read before sharing medical files
+
+- [Claude Code data usage](https://code.claude.com/docs/en/data-usage) — data flow, retention, training controls, and local sessions.
+- [Codex security](https://learn.chatgpt.com/docs/security) and [permissions](https://learn.chatgpt.com/docs/permissions) — current controls for local work and external access.
+
+Policies change. Check the page for your provider and plan before each major upload.
 
 ## Inspiration and adjacent methods
 
-- Andrej Karpathy's **"LLM wiki"** idea — keep your knowledge in plain text files that any AI can read as context. This guide is that pattern, applied to your medical life.
-- [Open Knowledge Format](https://github.com/GoogleCloudPlatform/knowledge-catalog) (Google Cloud) — an open format for keeping knowledge in plain files, managed the careful way software is managed. The folder you'll build is compatible in spirit.
+- [Andrej Karpathy's LLM Wiki](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f) — the plain-text knowledge pattern that inspired this guide.
+- [Open Knowledge Format](https://github.com/GoogleCloudPlatform/knowledge-catalog) — a plain-file approach to portable knowledge.
 
-## Learning to use AI
+## Finding and checking research
 
-- Anthropic's documentation (anthropic.com) — for Claude
-- OpenAI's documentation — for ChatGPT
-- Matthew Berman on YouTube — general AI tools coverage, accessible
+- [PubMed](https://pubmed.ncbi.nlm.nih.gov/) — biomedical papers and abstracts.
+- [Google Scholar](https://scholar.google.com/) — broad literature search. Verify the final paper on the journal or registry page.
+- [Crossref](https://search.crossref.org/) — DOI lookup.
 
 ## Genetic data
 
-- 23andMe / Ancestry / equivalents — download your raw data export while you have access
-- ClinVar — public database of what genetic variants mean clinically
+- [ClinVar](https://www.ncbi.nlm.nih.gov/clinvar/) — public variant classifications and review status.
+- [GeneReviews](https://www.ncbi.nlm.nih.gov/books/NBK1116/) — clinician-reviewed overviews of inherited conditions.
+- [National Society of Genetic Counselors directory](https://findageneticcounselor.nsgc.org/) — one route to a genetics professional. Availability varies by country.
+
+Consumer genetic results need clinical confirmation before care decisions. Record a VUS for reference and take it to a clinical genetics professional. Do not use it to guide treatment.
 
 ## Clinical-trial registries
 
-- clinicaltrials.gov (US-based; lists international trials)
-- EU Clinical Trials Register
-- WHO ICTRP
+- [ClinicalTrials.gov](https://clinicaltrials.gov/) — US registry with international studies.
+- [EU Clinical Trials Information System (CTIS)](https://euclinicaltrials.eu/search-for-clinical-trials/?lang=en) — current EU/EEA trial portal.
+- [EU Clinical Trials Register](https://www.clinicaltrialsregister.eu/ctr-search/search) — older EudraCT trials.
+- [WHO ICTRP](https://trialsearch.who.int/) — records from registries around the world.
 
-## What is NOT here
+Registry entries can lag. Confirm recruitment status with the study site.
 
-- Disease-specific communities and patient organizations — very much worth finding for your condition; too many to curate well from here
-- Specific clinic recommendations — they go stale too fast
-- Insurance navigation — country-specific
+## Outside this list
+
+- Disease-specific groups. Search for your condition and country.
+- Clinic recommendations. They go stale fast.
+- Insurance navigation. It is country-specific.

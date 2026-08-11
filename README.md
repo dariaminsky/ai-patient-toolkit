@@ -1,67 +1,98 @@
 # AI Patient Toolkit
 
-_A simple way to organize your medical records so AI can truly help you — and your doctors._
+_A patient-owned folder system for medical records and AI-assisted review._
 
-**What this is.** When you're facing a serious diagnosis, you drown in paper: reports, scans, lab results, half-remembered conversations. And every AI chat starts from zero, so it gives you generic answers. This toolkit fixes both. You gather everything into one folder on your computer, and an AI assistant turns it into a clear, always-current picture of your case — one that you own, that any AI can read, and that no company controls. And if your medical life spans several countries, languages, and healthcare systems that don't talk to each other, this is where the method pays off most: your folder becomes the one place where your whole story exists in one piece — and it travels with you.
+I built this during my own treatment. I use the same folder structure for my records. Version 0.2 publishes the reusable parts.
 
-You don't need to be technical. If you can use a chatbot, you can do all of this.
+Use it to organize files and maintain a source-checked health profile. Log decisions and side effects. Prepare appointments. Collect research leads for review.
 
-## How it works
+Use AI to organize records, map sources, and prepare questions. Diagnosis and emergency assessment require qualified clinicians. Discuss treatment choices with your medical team. For an emergency, contact the local emergency service.
 
-1. **Create a folder** on your computer. Put every medical file you have into it — PDFs, photos of documents, scans, lab results. Chaos is fine; sorting comes later, and not by you.
-2. **Open a coding assistant** — [Claude Code](https://claude.com/claude-code) or [Codex](https://openai.com/codex). Don't let the word "coding" put you off: you talk to it in plain language, in *your* language, like the chatbot you already know — it can just also see and organize the files on your own computer. Download the **desktop app** — a normal application you install like any other; ignore anything on those pages that mentions "terminal" or "npm". Two honest notes before you start: both need a paid plan (about $20/€20 a month — the free tiers don't include this), and the setup takes about 15 minutes once.
-3. **Give it the link to this repository** — the address of this page, copied from the top of your browser. If the app asks, choose **local** and select the folder you made in step 1. Then say: *"Please read AGENTS.md from this repository and set up my health folder."* It will sort your files, build your first **health profile** — one clear text file that holds your whole situation — and set everything up for you. (If the assistant says it can't open the link: on this page, press the green **Code** button → **Download ZIP**, unzip it next to your health folder, and say *"read AGENTS.md in the ai-patient-toolkit folder"*.)
-4. **When something new happens** — a new lab result, a new symptom, a new report — open the tool, tell it what's new (or drop the file into the folder), and ask it to **create a new version of your health profile**.
+Cloud assistants process relevant file content on their providers' systems, including files opened from a local folder. Medical profiles remain sensitive after names are removed. Read [Privacy and processing](#privacy-and-processing) before adding records.
 
-That's the whole routine. Stuck at any step? Open the ordinary free chatbot you already know (claude.ai or chatgpt.com), describe what's on your screen, and ask it to walk you through — it's very good at this. The chapters below explain each part gently, and the [templates](appendix/templates.md) are ready to copy.
+## Quick start
 
-## Why versions?
+1. On this page, press the green **Code** button, then **Download ZIP**. Unzip it and rename the folder `ai-patient-toolkit`.
+2. Create a folder called `health-workspace`. Put `ai-patient-toolkit` inside it.
+3. Copy the `ai-patient-toolkit/starter` folder into `health-workspace`. Rename the copy `my-health-records`.
+4. Read the [privacy and safety guide](02-privacy-and-safety.md) and the [starter instructions](starter/README.md). Check device encryption, backups, provider settings, and consent.
+5. Open `health-workspace` as a local folder in [Claude Code](https://claude.com/claude-code) or [Codex](https://openai.com/codex).
+6. Paste this prompt:
 
-Your medical situation is a story. Treatments change, results come and go, and one day you or a new doctor will need to know *what was true in March, before things changed*. So the profile is never overwritten — each update is saved as a new version, and every old one stays. Nothing is ever lost, and your history can't be rewritten, only added to.
+   > Read `ai-patient-toolkit/AGENTS.md`, `ai-patient-toolkit/02-privacy-and-safety.md`, and `my-health-records/README.md`. Help me set up `my-health-records`. Explain the data flow before reading a medical file. Ask for consent for each file batch. Show me the file plan first. Keep the originals unchanged. Ask me to verify every extracted date, unit, value, and source.
 
-## Why plain text (.md)?
+7. Review the plan. Approve one step at a time. Add one approved medical file. Keep the original where it is. Check every extracted fact against it.
 
-The files are plain text in Markdown (`.md`) — ordinary text with simple headings and lists:
+When a new report arrives, copy it into the folder. Ask the assistant to update the profile as a new version. Review the changes.
 
-- any AI can read it instantly, with your whole case in view;
-- it opens on any computer, today and in thirty years;
-- no app or company can lock it in — it's just text, and it's yours;
-- it travels: one small file carries your full picture to any new doctor, any new tool.
+## Available now in v0.2
 
-This is close in spirit to what Andrej Karpathy calls an "LLM wiki" — personal knowledge kept in plain text that any model can read — and to the [Open Knowledge Format](https://github.com/GoogleCloudPlatform/knowledge-catalog), Google Cloud's open format for keeping knowledge in plain files, managed the careful way software is managed. Your records stay compatible with tools that don't exist yet.
+- [Assistant setup instructions](AGENTS.md)
+- [Mindset](00-mindset.md)
+- [Data and versioning guide](01-data.md)
+- [Privacy and safety guide](02-privacy-and-safety.md)
+- Starter files:
+  - [Overview](starter/README.md)
+  - [Current-state profile](starter/00-current-state.md)
+  - [Source index](starter/source-index.md)
+  - [Care team](starter/care-team.md)
+  - [Decision note](starter/decision-note.md)
+  - [Side-effect log](starter/side-effect-log.md)
+  - [Research watch](starter/agents/research-watch.md)
+  - [Appointment prep](starter/agents/appointment-prep.md)
+- Synthetic example:
+  - [Example overview](example/README.md)
+  - [Example current-state profile](example/00-current-state.md)
+- [Prompt templates](appendix/templates.md)
+- [Resources](appendix/resources.md)
 
-## The little helpers (agents)
+## Coming later
 
-The same assistant can set up **agents** for you — standing instructions it runs whenever you ask and, where the tool supports it, on a schedule. The most useful one watches new research papers and clinical trials for *your specific conditions* and tells you only about things that could actually matter for you — with sources you can click and check. Another can prepare a clear, ranked list of questions before each doctor's appointment. You write them once and reuse them for as long as you need.
+- Tool-specific setup guides for Claude Code and Codex
+- Optional scheduling instructions where the tool supports them
+- Condition-specific workflows
+- Country-specific insurance and care-navigation workflows
 
-## Your privacy
+## Files and versions
 
-- Everything lives in a folder **on your computer** — not in an app, not in someone's cloud.
-- Know this before you start: when your assistant reads your files, their content goes to the AI provider you chose — that's how these tools work. So choose the provider deliberately, and check how it handles your data: policies differ by provider and plan, and they change. If there's a "use my data for training" setting, turn it off; a paid plan is usually the safer place for medical data than a free one. The guide shows where to look.
-- Anything that goes *further* than your own assistant — web searches, other services — gets identifiers stripped first: no names, no birth dates, no record numbers, no hospital names. The model reasons just as well without them.
-- Nothing about you goes into this repository, and nothing personal is in it.
+The main file is `00-current-state.md`. It records the current diagnosis, treatment, results, sources, and open questions.
 
-## What's inside
+Save each meaningful update as a new version. A later review may need the state from a specific date. Git can record the changes. Keep a separate encrypted backup too.
 
-| Section | What's in it | Status |
-|---|---|---|
-| [AGENTS.md](AGENTS.md) | Instructions your AI assistant follows to set everything up for you. | **Available** |
-| [00-mindset.md](00-mindset.md) | Why this exists, and the mindset of an active patient. | **Available** |
-| [01-data.md](01-data.md) | The heart of the method: the folder, the health profile, versions, privacy. | **Available** |
-| [appendix/templates.md](appendix/templates.md) | Ready to copy: folder structure, prompt templates. | **Available** |
-| [appendix/resources.md](appendix/resources.md) | Tools, learning material, registries. | **Available** |
-| More chapters | In drafts now. | Coming |
+The files use Markdown (`.md`): plain text with headings and lists. Text editors and AI tools can read it. You can compare versions and move the files between tools.
 
-This is a **living guide** — it grows as the tools change and as readers ask questions. I publish my thoughts in the companion newsletter, [Information Body](https://informationbody.substack.com) — subscribe if you'd like to be updated.
+## Reusable agent files
 
-## A few honest words
+Agent files are saved instructions for a repeated task.
 
-I made this for myself, while going through treatment — the story is in [Information Body](https://informationbody.substack.com). I'm not a doctor, and this guide will never tell you what to do about your illness. It exists so that you walk into every appointment with the full picture in hand, and so your doctors get a better-informed patient. Your decisions belong to you and your medical team.
+The research-watch file asks the assistant to look for papers and trial updates. It can miss sources or read them badly. Open the primary source. Take treatment-relevant findings to a clinician. Check the source even when two models agree.
+
+The appointment-prep file asks the assistant to draft a short question list from the current profile. Review every question before the visit.
+
+Run these files manually in v0.2. Scheduling depends on the tool.
+
+Research monitoring is optional. Skip it if it adds work you do not want.
+
+## Privacy and processing
+
+Choosing a local folder controls where the files are stored. A cloud assistant still sends relevant file content to its provider for processing.
+
+Removing names lowers the risk. A medical profile can still identify someone through a rare diagnosis, genetics, or dates.
+
+- Check the provider's retention and training policies.
+- Remove names, birth dates, record numbers, and hospital names before web searches.
+- Keep IDs, insurance numbers, and credentials out of the health folder.
+- Keep the health folder separate from this toolkit repository. Never push it to GitHub.
+- Read the full [privacy and safety guide](02-privacy-and-safety.md) before adding a large record set.
+
+## About this project
+
+I write about the background in [Information Body](https://informationbody.substack.com).
 
 ## Contributing
 
-Corrections and additions are welcome — open an issue or a pull request. If you're a researcher whose work is referenced and you'd like the framing adjusted, open an issue.
+Corrections and additions are welcome. Open an issue or a pull request. Researchers can open an issue to correct a citation or its framing.
 
 ## License
 
-Text: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Templates and scripts: [MIT](https://opensource.org/licenses/MIT). See [LICENSE.md](LICENSE.md).
+Guide text and examples: [CC BY 4.0](LICENSES/CC-BY-4.0.txt). Starter files and scripts: [MIT](LICENSES/MIT.txt). See [LICENSE.md](LICENSE.md).

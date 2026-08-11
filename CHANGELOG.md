@@ -1,6 +1,15 @@
 # Changelog
 
-This guide updates as the AI landscape changes, as the author's situation evolves, and as readers point out gaps.
+This guide updates as AI tools change and readers point out gaps.
+
+## v0.2 — privacy and starter files (2026-08-11)
+
+- Added a privacy and safety chapter with consent, provider transmission, local storage, backups, git, source verification, research, and urgent-care boundaries.
+- Added public contribution rules. Personal medical data is banned from issues, pull requests, discussions, commits, screenshots, and attachments.
+- Added a copy-ready starter folder with profile, source-index, care-team, decision, side-effect, research-watch, and appointment-prep templates.
+- Added a compact synthetic example with source IDs and provenance.
+- Expanded git guards for common medical, imaging, genetics, spreadsheet, and archive formats.
+- Added complete MIT and CC BY 4.0 license texts under `LICENSES/`.
 
 ## v0.1 — first public release (2026-07)
 

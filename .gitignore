@@ -1,9 +1,40 @@
 # never commit raw medical material
 original-records/
+**/original-records/
+private-health/
+raw/
+imports/
+exports/
 *.pdf
+*.doc
+*.docx
+*.rtf
+*.odt
+*.eml
+*.msg
 *.jpg
 *.jpeg
 *.png
+*.heic
+*.tif
+*.tiff
+*.dcm
+*.dicom
+*.nii
+*.nii.gz
+*.csv
+*.tsv
+*.xls
+*.xlsx
+*.vcf
+*.bam
+*.cram
+*.fastq
+*.fastq.gz
+*.zip
+*.7z
+*.tar
+*.gz
 .DS_Store
 
 # internal working notes — not for the public repo

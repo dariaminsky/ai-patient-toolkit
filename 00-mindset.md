@@ -1,35 +1,55 @@
 # 00 — Mindset
 
-If you're reading this, you're probably in one of three situations: you've just been diagnosed with something serious; you carry a hereditary risk that makes diagnosis a question of *when*, not *if*; or you're caring for someone in one of those situations.
+This guide is for serious diagnoses, hereditary risk, and caregivers. Choose how involved you want to be. That level can change.
 
-This chapter is about the one shift that makes everything else in this guide work.
+## Take part in the case
 
-## The shift
+Agency is practical:
 
-A serious diagnosis pushes you into a role: the patient who waits, signs the forms, and is told what happens next. You don't have to take that role. There is another one: an active participant in your own case. It requires no fight with your doctors and no medical degree.
+- Keep a copy of every important record.
+- Write down dates, units, sources, and questions.
+- Ask clinicians to explain the options and uncertainties.
+- Record each major decision and what changed afterward.
+- Check AI output against the original file or primary source.
 
-In practice, that means three things:
+Bring the care team a short update. Include what changed, the new report, and the open decision. Ask for the reasoning and the next review point.
 
-- **Your case is yours.** Your data, your history, your decisions. Most of the choices ahead depend on judgments you are fully capable of making — once you have the information. The information is the hard part. That's what this guide is for.
-- **Doctors are collaborators.** The good ones read new research, welcome questions, and treat you as part of the team. When you find one, hold on to them and bring them everything you learn. If someone gets irritated by your questions — that's useful information too.
-- **The research is your job now.** Science reaches everyday practice with a delay of years, while new results come out monthly — and sometimes they matter for your exact situation. Nobody will watch that frontier for you. With today's AI tools, you can — without a medical degree and without writing code.
+If an answer stays unclear, ask again. Request another clinical opinion when you need one.
 
-That third point is the new one. It wasn't possible before these tools. Now it takes a folder and a chatbot. That's why this guide exists.
+## Give AI bounded work
 
-## What this guide is — and isn't
+Use AI to:
 
-It gives you working methods: how to organize your records so any AI understands your case, how to keep your history versioned and safe, how to check what AI tells you, how to prepare for appointments, how to follow new research on your condition.
+- organize approved files;
+- transcribe a report for your review;
+- compare a new result with the current profile;
+- map claims to sources;
+- draft questions for an appointment;
+- collect research leads for review.
 
-It will not tell you what to do about your illness. I'm not a doctor, and your situation is yours. It won't promise certainty — nobody honest can. What it gives you is a much better set of questions to bring to the people treating you, and the calm that comes from having real things to do and a real way to do them well.
+Diagnosis and emergency assessment require qualified clinicians. Discuss treatment choices with your medical team.
 
-## What you need
+For urgent symptoms, contact a clinician or local emergency service. Do not wait for an AI answer.
 
-- No programming. If you can use a chatbot, you're equipped.
-- A couple of hours to set things up, then minutes at a time.
-- One discipline: never act on a single AI answer. Cross-check between models, and verify against your own records.
-- Patience with yourself. One small step at a time is exactly the right speed.
+## Check the work
 
-I built all of this for myself, during my own treatment; the story is in [Information Body](https://informationbody.substack.com). This guide is the part you can reuse.
+Verify every name, date, unit, and value against the original record. Models misread scans and fill gaps.
+
+Use a second model to catch obvious mistakes. Then check the source. Models can repeat the same error.
+
+Bring treatment-relevant findings to a clinician. Phrase them as questions.
+
+## Research is optional
+
+Follow research when it helps with a real question. A research watch can miss papers and misread results. Open the primary source before saving a claim.
+
+Skip this work when time or energy is short. Ask a family member, advocate, or care team member to help if you want it done.
+
+## Start small
+
+Begin with two or three key records. Draft twenty lines of `00-current-state.md`. Add sources. Check the facts. Make a new version when something changes.
+
+I built this workflow during my own treatment. The background is in [Information Body](https://informationbody.substack.com).
 
 ---
 
