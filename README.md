@@ -2,13 +2,17 @@
 
 This repository contains a folder structure, templates, and AI-assistant instructions for organizing medical records.
 
-I built this during my own treatment. I use the same folder structure for my records. Version 0.2 publishes the reusable parts.
+I built this during my own treatment for metastatic breast cancer. I use the same folder structure for my records. Version 0.2 publishes the reusable parts. I write about the background in [Information Body](https://informationbody.substack.com).
 
 Included: file-organization instructions, a source-checked health-profile template, decision and side-effect logs, appointment-prep instructions, and a research-lead workflow.
 
 Use AI to organize records, map sources, and prepare questions. Diagnosis and emergency assessment require qualified clinicians. Discuss treatment choices with your medical team. For an emergency, contact the local emergency service.
 
 Cloud assistants process relevant file content on their providers' systems, including files opened from a local folder. Medical profiles remain sensitive after names are removed. Read [Privacy and processing](#privacy-and-processing) before adding records.
+
+## Why plain text
+
+A profile in plain text stays readable by any assistant and any text editor. Vendor health features keep your records inside one provider's system. Here the files stay on your disk, in a format you can move, compare, and back up. Processing still happens at the provider — see [Privacy and processing](#privacy-and-processing). When a tool changes or shuts down, the folder is unaffected.
 
 ## Quick start
 
@@ -49,6 +53,8 @@ When a new report arrives, copy it into the folder. Ask the assistant to update 
 ## Files and versions
 
 The main file is `00-current-state.md`. It records the current diagnosis, treatment, results, sources, and open questions.
+
+Without it, each new chat starts from a blank context and answers in general terms. With it, the assistant reads the diagnosis, treatment history, and results first, and you can check which source each fact came from.
 
 Save each meaningful update as a new version. A later review may need the state from a specific date. Git can record the changes. Keep a separate encrypted backup too.
 
