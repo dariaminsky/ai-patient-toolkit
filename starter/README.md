@@ -1,10 +1,10 @@
-# Starter folder
+# Your health folder
 
-Copy this folder to a private place on your computer. Rename the copy. Work there.
+These are your working files.
 
-Do not fill these templates inside the public toolkit repository.
+If you are reading this inside the toolkit repository, copy the folder to a private place first and rename the copy. Do not fill these templates inside the public repository.
 
-Read [`02-privacy-and-safety.md`](../02-privacy-and-safety.md) first.
+Read `ai-patient-toolkit/02-privacy-and-safety.md` first.
 
 ## Start
 
@@ -19,13 +19,17 @@ Read [`02-privacy-and-safety.md`](../02-privacy-and-safety.md) first.
 
 Keep raw records outside this working folder at first. Add one document at a time when you need it.
 
+## Growing the folder
+
+These files are the flat starting set. Numbered subfolders — diagnosis, treatment, genetics, decisions, side effects, research, archive — get added as records accumulate. The full structure is in `ai-patient-toolkit/appendix/templates.md`.
+
 ## Files
 
 - `00-current-state.md` — verified snapshot of the case.
 - `source-index.md` — source IDs, protected locations, and approved working copies.
 - `care-team.md` — names and contact details. Keep local.
-- `decision-note.md` — one question, its evidence, and the clinician's decision.
-- `side-effect-log.md` — observations and advice received.
+- `decision-note.md` — one question, its evidence, and the clinician's decision. Copy this file for each new decision.
+- `side-effect-log.md` — observations and advice received. Copy it per side effect when one log gets crowded.
 - `agents/research-watch.md` — source-first research instructions.
 - `agents/appointment-prep.md` — a short appointment agenda.
 - `.gitignore` — a basic guard against committing raw files.

@@ -4,6 +4,8 @@ The AI provider will process what you paste. Remove details the task does not ne
 
 ## File structure template
 
+The `starter/` folder gives you the top-level files. The numbered subfolders below are added as records accumulate.
+
 ```
 your-health/
 ├── README.md                      # map of the folder; start here
