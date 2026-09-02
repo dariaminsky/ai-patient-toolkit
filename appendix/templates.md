@@ -9,6 +9,7 @@ The `starter/` folder gives you the top-level files. The numbered subfolders bel
 ```
 your-health/
 ├── README.md                      # map of the folder; start here
+├── original-records/              # every original as it came; never edited, read only on request
 ├── 00-current-state.md            # current profile; direct identifiers removed; still sensitive
 ├── source-index.md                # source IDs and protected locations of original records
 ├── care-team.md                   # your doctors and clinics — separate on purpose, stays local
@@ -37,7 +38,7 @@ your-health/
 └── 99-archive/                    # old profile versions: 00-current-state-v1-YYYY-MM-DD.md
 ```
 
-Keep raw originals and consumer genetic exports in protected storage outside the AI workspace. Record their locations in `source-index.md`. Copy one approved source into the working folder only when the current task needs it.
+Keep the originals in `original-records/`; the assistant reads them only after approval and never edits them. Keep consumer genetic exports in protected storage outside the folder. Record every source in `source-index.md`.
 
 Use these rules: keep originals, use plain text for summaries, mark every source, and share only what the current task needs.
 

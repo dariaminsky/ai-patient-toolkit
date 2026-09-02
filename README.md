@@ -16,18 +16,17 @@ A profile in plain text stays readable by any assistant and any text editor. Ven
 
 ## Quick start
 
-1. On this page, press the green **Code** button, then **Download ZIP**. Unzip it and rename the folder `ai-patient-toolkit`.
-2. Create a folder called `health-workspace`. Put `ai-patient-toolkit` inside it.
-3. Copy the `ai-patient-toolkit/starter` folder into `health-workspace`. Rename the copy `my-health-records`.
-4. Read the [privacy and safety guide](02-privacy-and-safety.md) and the [starter instructions](starter/README.md). Check device encryption, backups, provider settings, and consent.
-5. Open `health-workspace` as a local folder in [Claude Code](https://claude.com/claude-code) or [Codex](https://openai.com/codex).
-6. Paste this prompt:
+1. Create a folder, for example `my-health`. Inside it, create `original-records/` and copy every medical file you have into it: PDFs, photos of documents, screenshots, portal exports. Any order, any shape. Nothing in there gets edited.
+2. Read the [privacy and safety guide](02-privacy-and-safety.md). Check device encryption, backups, and your provider's training and retention settings.
+3. Open `my-health` as a local folder in [Claude Code](https://claude.com/claude-code) or [Codex](https://openai.com/codex). These are coding assistants that can see files on your computer. You talk to them in plain language.
+4. Paste this prompt:
 
-   > Read `ai-patient-toolkit/AGENTS.md`, `ai-patient-toolkit/02-privacy-and-safety.md`, and `my-health-records/README.md`. Help me set up `my-health-records`. Explain the data flow before reading a medical file. Ask for consent for each file batch. Show me the file plan first. Keep the originals unchanged. Ask me to verify every extracted date, unit, value, and source.
+   > Read https://github.com/dariaminsky/ai-patient-toolkit/blob/main/AGENTS.md and follow it. My originals are in `original-records/`. Explain the data flow before reading any of them. Ask for consent for each batch of files. Show me the file plan first. Keep the originals unchanged. Ask me to verify every extracted date, unit, value, and source.
 
-7. Review the plan. Approve one step at a time. Add one approved medical file. Keep the original where it is. Check every extracted fact against it.
+5. If the assistant cannot open links: press the green **Code** button on this page, then **Download ZIP**. Unzip it into `my-health` and point the assistant at `ai-patient-toolkit/AGENTS.md` instead. The `starter/` folder holds the same templates for filling in by hand.
+6. Review the plan. Approve one step at a time. Start with two or three documents, not the whole archive. Check every extracted fact against the original.
 
-When a new report arrives, copy it into the folder. Ask the assistant to update the profile as a new version. Review the changes.
+When a new report arrives, drop it into `original-records/`. Ask the assistant to update the profile as a new version. Review the changes.
 
 ## Contents of v0.2
 

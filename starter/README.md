@@ -17,7 +17,7 @@ Read `ai-patient-toolkit/02-privacy-and-safety.md` first.
 7. Fill `00-current-state.md` from formal records.
 8. Mark anything written from memory as `UNVERIFIED`.
 
-Keep raw records outside this working folder at first. Add one document at a time when you need it.
+Put the originals in `original-records/` next to these files. Let the assistant read two or three at a time, after you approve them. Nothing in there gets edited.
 
 ## Growing the folder
 
@@ -25,6 +25,7 @@ These files are the flat starting set. Numbered subfolders — diagnosis, treatm
 
 ## Files
 
+- `original-records/` — your originals, as they came. Never edited.
 - `00-current-state.md` — verified snapshot of the case.
 - `source-index.md` — source IDs, protected locations, and approved working copies.
 - `care-team.md` — names and contact details. Keep local.

@@ -27,9 +27,9 @@ Use this folder for organization and appointment prep. If a symptom may be urgen
 
 ## Gather everything
 
-Start with an inventory. List each document, scan, report, lab result, consultation note, and genetic test. Keep the originals in protected private storage.
+Start with an inventory. List each document, scan, report, lab result, consultation note, and genetic test. Keep the originals unchanged.
 
-Choose what the assistant may read. Approve the exact files first. Copy one document into the working folder when the task needs it. A local app can still send its contents to the AI provider for inference.
+Put every original into `original-records/` inside your health folder. The assistant reads only the files you approve, one batch at a time, and never edits them. A local app can still send what it reads to the AI provider for inference.
 
 - Portal won't let you download? **Photograph the screen.**
 - Paper documents? **Photograph each page.**
@@ -72,6 +72,7 @@ The starter template is about twenty lines. Expand it as verified records are ad
 ```
 your-health/
 ├── README.md                   # what's in this folder
+├── original-records/           # every original as it came: PDFs, photos, exports. Never edited
 ├── 00-current-state.md         # current profile; direct identifiers removed; still sensitive
 ├── source-index.md             # source IDs and protected locations of original records
 ├── care-team.md                # your doctors and clinics — kept separate, stays local
@@ -85,7 +86,7 @@ your-health/
 └── 99-archive/                 # old profile versions (full-date names)
 ```
 
-Keep raw originals outside the AI workspace by default. Record each protected location in `source-index.md`. Bring in one approved working copy when the current task needs it.
+Keep the originals in `original-records/`. The assistant reads a file from there only after you approve that batch. It never changes, renames, or moves anything there. Record each file in `source-index.md`.
 
 Start with `README.md`, `00-current-state.md`, and `source-index.md`. Add the rest as you go (full template in the [appendix](appendix/templates.md)). Share only the files needed for the current task.
 
@@ -151,7 +152,7 @@ Treat AI translation as a draft. Verify doses, units, dates, anatomy, and every 
 
 1. Copy the starter folder and make a source index.
 2. Add one approved report. Draft twenty lines and verify them.
-3. Inventory the remaining records. Leave the originals in protected storage.
+3. Copy the remaining originals into `original-records/`. Inventory them in `source-index.md`.
 4. Transcribe the most important reports — diagnostics first, genetics next.
 5. When something changes, make a new version. When something is decided, add a note to `04-decisions/`.
 

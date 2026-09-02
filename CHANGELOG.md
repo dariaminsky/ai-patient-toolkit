@@ -2,6 +2,12 @@
 
 This changelog records published changes.
 
+## Unreleased
+
+- Quick start now matches the companion post: one folder, originals in `original-records/`, assistant pointed at `AGENTS.md` by link, ZIP as fallback.
+- Originals stay inside the health folder in `original-records/` (already excluded by both `.gitignore` files). The assistant reads them only per approved batch and never edits them.
+- `AGENTS.md` gives the raw-file URL pattern for assistants that arrived by link.
+
 ## v0.2 — privacy and starter files (2026-08-11)
 
 - Added a privacy and safety chapter with consent, provider transmission, local storage, backups, git, source verification, research, and urgent-care boundaries.
